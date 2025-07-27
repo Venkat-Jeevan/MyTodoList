@@ -1,0 +1,62 @@
+<%- include("partials/header") %>
+    <section class="auth-section">
+      <div class="register-box">
+        <form id="registerForm" action="/register" method="POST" class="auth-form">
+          <h2 class="auth-title">Create Account</h2>
+
+          <div id="errorMessage" class="error-message"></div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="auth-input"
+              autocomplete="username"
+              aria-describedby="email-help"
+            />
+            <label class="auth-label">Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="auth-input"
+              minlength="6"
+              autocomplete="new-password"
+              aria-describedby="password-help"
+            />
+            <label class="auth-label">Password</label>
+          </div>
+          <p class="password-rules">Minimum 6 characters</p>
+
+          <div class="remember-forgot">
+            <label class="remember-me">
+              <input type="checkbox" id="terms" required />
+              <span
+                >I agree to the
+                <a href="#" class="auth-link">terms & conditions</a></span
+              >
+            </label>
+          </div>
+
+          <button type="submit" class="auth-btn">Register</button>
+
+          <div class="login-link">
+            <p>
+              Already have an account?
+              <a href="login.html" class="auth-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  <%- include("partials/footer") %>
